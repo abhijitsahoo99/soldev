@@ -33,11 +33,9 @@ const connection = new Connection(
   "confirmed"
 );
 const address = new PublicKey(suppliedPubKey);
-
 if (PublicKey.isOnCurve(address)) {
   console.log("invalid wallet address");
 }
-
 console.log(PublicKey.isOnCurve(address));
 
 const balanceInLamports = await connection.getBalance(address);
