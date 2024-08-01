@@ -28,7 +28,7 @@ console.log(
 );
 
 const transaction = new Transaction();
-const LAMPORTS_TO_SEND = 5000;
+const LAMPORTS_TO_SEND = 1000000000;
 const sendSolInstruction = SystemProgram.transfer({
   fromPubkey: senderKeypair.publicKey,
   toPubkey: toPubkey,
@@ -43,3 +43,8 @@ console.log(
   `💸 Finished! Sent ${LAMPORTS_TO_SEND} to the address ${toPubkey}. `
 );
 console.log(`Transaction signature is ${signature}!`);
+
+// How much SOL did the transfer take? What is this in USD?
+// Can you find your transaction on https://explorer.solana.com? Remember we are using the devnet network.
+// How long does the transfer take?
+// What do you think "confirmed" means?
